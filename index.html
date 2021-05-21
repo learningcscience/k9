@@ -1,0 +1,272 @@
+<!doctype html>
+<html>
+
+
+	<head>
+		<title> K9</title>		
+		<link rel = "icon" href ="img/logo.png">
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+
+
+		<style>
+
+			* {
+				box-sizing: border-box;
+			}
+
+			body{
+				margin: 0;
+				font-family: tahoma;
+				font-size: 1.1em;
+			}
+			.navbar{
+				background-color: #3e65da;
+				box-shadow: 5px 10px 30px #3e65da;
+			}
+			img{
+   				 height: 80px;
+			}
+			span{
+				font-size: 25px;
+				cursor: pointer;
+				float: right;
+				color: white;
+				position: absolute;
+				top: 1.8%;
+				right: 2%;
+			}
+			.side {
+  				height: 100%;
+ 				 width: 0;
+ 				 position: fixed;
+ 				 z-index: 1;
+				  top: 0;
+				  right: 0%;
+				float: right;
+				overflow: hidden;
+				background-color: #3e65da;
+				box-shadow: #3e65da 0px 5px 15px;
+ 				 transition: 0.5s;
+ 				 padding-top: 60px;
+			}
+			.side a {
+  				padding: 8px 8px 8px 32px;
+ 				 text-decoration: none;
+  				font-size: 25px;
+				color: white;
+  				display: block;
+ 				 transition: 0.3s;
+			}
+			.side .closebtn {
+  				position: absolute;
+  				top: 0;
+				color: white;
+  				left: -20%;
+  				font-size: 36px;
+  				margin-left: 50px;
+			}
+			@media screen and (max-height: 450px) {
+  			.side {
+				padding-top: 15px;
+			}
+  			.side a {
+				font-size: 18px;
+			}
+			
+			}
+
+		.row{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: 100px 0;
+		}
+		.col-1{
+			flex: 2;
+			position: relative;
+			margin-left: 50px;
+		}
+		.col-1 h2{
+			font-size: 3rem;
+			color:#1c3548;
+			margin:0px 0px 10px 0px;
+			line-height: 60px;
+		}
+		.col-1 p{
+			font-size: 25px;
+			color: #707070;
+			font-weight: 100;
+			margin: 20px 0 10px;
+		}
+		.col-2{
+			position: relative;
+			flex: 1;
+			display: flex;
+			text-align: center;
+		}
+		.col-2  .book{
+			width: 90%;
+			height: 100%;
+		}
+
+		@media only screen and (max-width: 700px){
+
+		.row{
+			flex-direction: column-reverse;
+			margin: 50px 0;
+		}
+		.col-2{
+			flex: 1;
+			margin-bottom: 50px;
+		}
+		.col-2 .book{
+  			 width: 100%;
+		}
+	}
+		.content1{
+ 			 position: relative;
+ 			 margin: 130px auto;
+ 			text-align: center;
+ 		 	padding: 0 20px;
+		}.content1 .text{
+  			font-size: 2.5rem;
+ 			 font-weight: 600;
+ 			 color: #202020;
+		}
+		
+		.content1 .p{
+ 			 font-size: 2.1875rem;
+ 			 font-weight: 600;
+  			color: #202020;
+		}
+
+		h1{
+			font-family: 'Source Sans Pro', sans-serif;
+			 font-size: 30px; 
+			letter-spacing: -1px; 
+			color: #DFBF84; 
+			text-transform: uppercase; 
+			margin: 10px 0 24px; 
+			text-align: center; 
+			line-height: 50px;
+		}
+		.contact-box-container{
+   			 display: flex;
+    			justify-content: center;
+   			 align-items: center;
+   			 margin: 0px 0px 30px 0px;
+		}
+		.contact-box{
+   			 background-color: #ffffff;
+   			 padding: 20px;
+    			display: flex;
+    			flex-direction: column;
+    			justify-content: center;
+   			 align-items: center;
+   			 margin: 10px;
+    			border: 1px solid #e2e2e2;
+		}
+		.contact-box strong{
+  			  color:#2c2c2c;
+    			font-size: 1.3rem;
+		}
+		.contact-box p{
+  			  color: #5c5c5c;
+   			 font-weight: 400;
+   			 margin: 10px;
+   			 text-align: center;
+		}
+		.contact-box p a{
+    			color: #059bce;
+		}
+
+
+		footer{
+   			 padding: 15px;
+   			 background-color: #3e65da;
+    			color: #222222;
+    			font-size: 0.9rem;
+   			 border-top: 1px solid rgba(0,0,0,0.05);
+		}
+		footer p{
+			text-align: center;
+			color: white;
+		}
+		</style>
+
+
+	</head>
+
+	<body>
+
+
+		<div class="navbar" >
+			<img src="img/logo.png">
+			<span onclick="openNav()">&#9776;</span>
+		</div>
+		
+		<div class="side" id="sidenav">
+			 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+			<a href="index.html">Home</a>
+			<a href="#about">About</a>
+			<a href="#contact">Contact</a>
+		</div>
+
+
+
+		<div class="row">
+			<div class="col-1">
+			<h2>Give your dog what they need</h2>
+			<p>Dogs in shelters spend  far too much of their time with little to do. 
+			      Their lives are more stressful  than is natural or acceptable.</p>
+			</div>
+			<div class="col-2">
+				<img src="img/2.png" class="book">
+			
+			</div>
+		</div>
+
+
+			<h1 id="about">About</h1>			
+
+		<div class="row">
+			<div class="col-1">
+			<h2>About <br> K9</h2>
+			<p>K9 is one of the best center for your dog. We take care of your dogs like ours. You can 			                                               contact us for more details.It is avilable in  09:00 AM - 08:00 PM  in 4 days <br> a week. Sunday, Tuesday, 
+			       Thursday, Saturday. </p>
+			</div>
+			<div class="col-2">
+				<img src="img/5.png" class="book">
+			
+			</div>
+		</div>
+
+            <div class="contact-box" id="contact">
+                <h1>Address</h1>
+                <p>KATHMANDU, BANESHOR, OE 45678<br><b>Phone:</b> <a>+(012) 798856776</a><br><b>Email:</b> <a>dgcenter7794@gmail.com</a></p>
+            </div>
+
+
+			<footer>
+       				     <p>Copyright 2021 - K9</p>
+       			 </footer>
+      		
+
+
+	<script>
+	function openNav() {
+ 		 document.getElementById("sidenav").style.width = "250px";
+	}
+
+	function closeNav() {
+  		document.getElementById("sidenav").style.width = "0";
+	}
+	</script>
+
+
+	</body>
+
+</html>
